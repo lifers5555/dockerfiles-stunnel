@@ -1,6 +1,3 @@
-cert = ${STUNNEL_CRT}
-key = ${STUNNEL_KEY}
-
 setuid = ${STUNNEL_UID}
 setgid = ${STUNNEL_GID}
 
@@ -16,9 +13,9 @@ sslVersionMin = TLSv1.2
 debug = ${STUNNEL_DEBUG}
 output = /var/log/stunnel/stunnel.log
 foreground = yes
-client = ${STUNNEL_CLIENT}
 
 [${STUNNEL_SERVICE}]
+client = ${STUNNEL_CLIENT}
 accept = ${STUNNEL_ACCEPT}
 connect = ${STUNNEL_CONNECT}
 delay = ${STUNNEL_DELAY}
@@ -26,3 +23,5 @@ verify = ${STUNNEL_VERIFY}
 ${STUNNEL_PROTOCOL_CONFIG_LINE}
 ${STUNNEL_CIPHERS_CONFIG_LINE}
 ${STUNNEL_PSKSECRETS_CONFIG_LINE}
+cert = ${STUNNEL_CRT}
+key = ${STUNNEL_KEY}
